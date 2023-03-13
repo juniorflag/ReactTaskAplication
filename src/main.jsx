@@ -2,10 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
-import TaskList from './taskList'
+
+import {TaskContextProvider} from './context/taskContext'
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <TaskList/>
+    <TaskContextProvider>
+    <App/>
+
+    </TaskContextProvider>
   </React.StrictMode>,
 )
